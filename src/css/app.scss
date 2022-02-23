@@ -1,0 +1,164 @@
+// app global css in SCSS form
+.bg-sompo {
+  background-color: #b61639
+}
+.bg-sompo-light {
+	background-color: rgb(245, 245, 245);
+}
+.bg-sompo-dark {
+	background-color: #191919
+}
+.bg-sompo-gray {
+	background-color: #dadada
+}
+.bg-card {
+	background-color: #272727
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.wave{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+}
+
+.card-widget {
+	border-radius: 8px;
+	-webkit-box-shadow: 0 4px 6px 0 rgb(85 85 85 / 8%), 0 1px 20px 0 rgb(0 0 0 / 7%), 0px 1px 11px 0px rgb(0 0 0 / 7%);
+	-moz-box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.08), 0 1px 20px 0 rgba(0, 0, 0, 0.07), 0px 1px 11px 0px rgba(0, 0, 0, 0.07);
+	box-shadow: 0 4px 6px 0 rgb(85 85 85 / 8%), 0 1px 20px 0 rgb(0 0 0 / 7%), 0px 1px 11px 0px rgb(0 0 0 / 7%);
+}
+
+// TEXT COLORS
+
+.text-sompo {
+	color: #b61639
+}
+
+.text-teal-3 {
+	color: #80cbc4!important;
+}
+.text-teal-10 {
+	color: #004d40!important;
+}
+.text-blue-3 {
+	color: #90caf9!important;
+}
+.text-blue-10 {
+	color: #0d47a1!important;
+}
+.text-orange-3 {
+	color: #ffcc80!important;
+}
+.text-orange-10 {
+	color: #e65100!important;
+}
+.text-purple-3 {
+	color: #ce93d8!important;
+}
+.text-purple-10 {
+	color: #4a148c!important;
+}
+.text-google-fonts {
+	color: #8ab4f8!important;
+}
+.text-gray {
+	color: #353535;
+}
+
+
+
+
+// FONT SIZES
+.font-11 {
+	font-size: 11px;
+}
+.font-12 {
+	font-size: 12px;
+}
+.font-13 {
+	font-size: 13px;
+}
+.font-14 {
+	font-size: 14px;
+}
+
+.font-15 {
+	font-size: 15px;
+}
+
+.font-16 {
+	font-size: 16px;
+}
+
+.font-17 {
+	font-size: 17px;
+}
+
+.font-18 {
+	font-size: 18px;
+}
+
+.font-19 {
+	font-size: 19px;
+}
+
+.font-20 {
+	font-size: 20px;
+}
+
+q-table td, .q-data-table th {
+	/* don't shorten cell contents*/
+	white-space: normal !important;
+}
+
+.q-table thead, .q-table tr, .q-table th, .q-table td {
+	border-color: rgba(228, 228, 228, 0.12);
+}
+
+/*
+.justify-center, .flex-center {
+    justify-content: center;
+}
+.column {
+    flex-direction: column;
+}
+.row, .column, .flex {
+    display: flex;
+    flex-wrap: wrap;
+}*/
+.q-item__section--main {
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    flex: 10000 1 0%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.q-item.q-router-link--active, .q-item--active {
+    color: #ffffff;
+}
+
+/*.q-stepper__title {
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: 0.1px;
+}*/
+
+
+body::-webkit-scrollbar{
+	display: none;
+}

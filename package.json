@@ -1,0 +1,52 @@
+{
+  "name": "appraisal",
+  "version": "0.0.1",
+  "description": "SOMPO - İhale Yöntemi ile Araç Satış Sistemi",
+  "productName": "SOMPO - İhale Yöntemi ile Araç Satış Sistemi",
+  "author": "lenorabilisim",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ./",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.11.4",
+    "apexcharts": "^3.29.0",
+    "axios": "^0.23.0",
+    "core-js": "^3.18.3",
+    "localforage": "^1.10.0",
+    "moment": "^2.29.1",
+    "nanoid": "^3.1.30",
+    "pdfmake": "^0.2.2",
+    "quasar": "^2.2.2",
+    "queue": "^6.0.2",
+    "vue-i18n": "^9.1.7",
+    "vue3-apexcharts": "^1.4.1",
+    "vuex": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.15.8",
+    "@quasar/app": "^3.1.8",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^7.19.1",
+    "eslint-webpack-plugin": "^3.0.1",
+    "quasar-app-extension-vuelidate-rules": "^0.4.0"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 12.22.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

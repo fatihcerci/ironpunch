@@ -1,0 +1,27 @@
+{
+  "name": "com.lenora.sompo.ihale",
+  "displayName": "SOMPO - İhale Yöntemi ile Araç Satış Sistemi",
+  "version": "1.0.0",
+  "description": "SOMPO - İhale Yöntemi ile Araç Satış Sistemi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "lenorabilisim",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^10.1.1",
+    "cordova-plugin-splashscreen": "^6.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-splashscreen": {}
+    }
+  }
+}

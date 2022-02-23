@@ -1,0 +1,62 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 100" width="101" height="100">
+	<title>sompo-sigorta-white-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M0.03 58.72C0.03 81.49 18.47 99.94 41.21 99.94C63.96 99.94 82.4 81.49 82.4 58.72C82.4 35.96 63.96 17.5 41.21 17.5C18.47 17.5 0.03 35.96 0.03 58.72Z" />
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="M99.04 42.05C99.04 64.8 80.6 83.24 57.85 83.24C35.11 83.24 16.67 64.8 16.67 42.05C16.67 19.3 35.11 0.85 57.85 0.85C80.6 0.85 99.04 19.3 99.04 42.05ZM21.53 42.05C21.53 62.11 37.79 78.37 57.85 78.37C77.91 78.37 94.17 62.11 94.17 42.05C94.17 21.99 77.91 5.73 57.85 5.73C37.79 5.73 21.53 21.99 21.53 42.05Z" />
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp3">
+			<path d="M20.41 41.6C20.41 20.94 37.24 4.19 58.01 4.19C78.77 4.19 95.6 20.94 95.6 41.6C95.6 62.26 78.77 79.02 58.01 79.02C37.24 79.02 20.41 62.26 20.41 41.6ZM24.03 41.6C24.03 60.28 39.24 75.42 58.01 75.42C76.77 75.42 91.98 60.28 91.98 41.6C91.98 22.92 76.77 7.79 58.01 7.79C39.24 7.79 24.03 22.93 24.03 41.6Z" />
+		</clipPath>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="2847.477" y1="4.191" x2="2847.477" y2="5487.517">
+			<stop offset="0" stop-color="#5f6163"  />
+			<stop offset="35.79" stop-color="#a5a8ab"  />
+			<stop offset="51.41" stop-color="#e7e8e8"  />
+			<stop offset="85.42" stop-color="#a5a8ab"  />
+			<stop offset="100" stop-color="#474749"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="2807.038" y1="4.223" x2="2807.038" y2="5462.954">
+			<stop offset="0" stop-color="#5f6163"  />
+			<stop offset="35.79" stop-color="#a5a8ab"  />
+			<stop offset="51.41" stop-color="#e7e8e8"  />
+			<stop offset="85.42" stop-color="#a5a8ab"  />
+			<stop offset="100" stop-color="#474749"  />
+		</linearGradient>
+		<linearGradient id="grd3" gradientUnits="userSpaceOnUse"  x1="3496.448" y1="6815.44" x2="3496.448" y2="91.167">
+			<stop offset="0" stop-color="#d1d3d5"  />
+			<stop offset="13.92" stop-color="#b0b3b6"  />
+			<stop offset="45.4" stop-color="#474749"  />
+			<stop offset="56.35" stop-color="#e7e8e8"  />
+			<stop offset="100" stop-color="#c7c8ca"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+		.shp1 { fill: none } 
+		.shp2 { fill: url(#grd1) } 
+		.shp3 { fill: url(#grd2) } 
+		.shp4 { fill: url(#grd3) } 
+	</style>
+	<g id="Layer">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp1)">
+				<path id="Layer" fill-rule="evenodd" class="shp0" d="M0.03 58.72C0.03 81.49 18.47 99.94 41.21 99.94C63.96 99.94 82.4 81.49 82.4 58.72C82.4 35.96 63.96 17.5 41.21 17.5C18.47 17.5 0.03 35.96 0.03 58.72Z" />
+			</g>
+		</g>
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp2)">
+				<path id="Layer" class="shp1" d="M57.85 0.85C35.11 0.85 16.67 19.3 16.67 42.05C16.67 64.8 35.11 83.24 57.85 83.24C80.6 83.24 99.04 64.8 99.04 42.05C99.04 19.3 80.6 0.85 57.85 0.85ZM21.53 42.05C21.53 21.99 37.79 5.73 57.85 5.73C77.91 5.73 94.17 21.99 94.17 42.05C94.17 62.11 77.91 78.37 57.85 78.37C37.79 78.37 21.53 62.11 21.53 42.05L21.53 42.05Z" />
+			</g>
+		</g>
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp3)">
+				<path id="Layer" fill-rule="evenodd" class="shp2" d="M20.41 41.6C20.41 20.94 37.24 4.19 58.01 4.19C78.77 4.19 95.6 20.94 95.6 41.6C95.6 62.26 78.77 79.02 58.01 79.02C37.24 79.02 20.41 62.26 20.41 41.6ZM24.03 41.6C24.03 60.28 39.24 75.42 58.01 75.42C76.77 75.42 91.98 60.28 91.98 41.6C91.98 22.92 76.77 7.79 58.01 7.79C39.24 7.79 24.03 22.93 24.03 41.6Z" />
+			</g>
+		</g>
+		<path id="Layer" fill-rule="evenodd" class="shp3" d="M21.25 41.55C21.25 20.94 37.96 4.22 58.57 4.22C79.18 4.22 95.89 20.94 95.89 41.55C95.89 62.17 79.18 78.88 58.57 78.88C37.96 78.88 21.25 62.17 21.25 41.55ZM58.64 75.75C77.48 75.75 92.76 60.47 92.76 41.62C92.76 22.77 77.48 7.49 58.64 7.49C39.8 7.49 24.52 22.77 24.52 41.62C24.52 60.47 39.79 75.75 58.64 75.75L58.64 75.75Z" />
+		<path id="Layer" fill-rule="evenodd" class="shp4" d="M17.03 41.55C17.03 18.6 35.63 0 58.57 0C81.51 0 100.11 18.6 100.11 41.55C100.11 64.5 81.51 83.11 58.57 83.11C35.63 83.11 17.03 64.5 17.03 41.55ZM58.57 78.61C79.03 78.61 95.62 62.02 95.62 41.55C95.62 21.09 79.03 4.5 58.57 4.5C38.11 4.5 21.52 21.09 21.52 41.55C21.52 62.02 38.11 78.61 58.57 78.61L58.57 78.61Z" />
+	</g>
+</svg>
