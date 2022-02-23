@@ -1,5 +1,13 @@
 <template>
   <q-page q-layout view="hHh lpR fFf">
+
+    <div class="row justify-center" style="height:200px">
+      <img
+          src="~/assets/ironpunch.svg"
+          style="position:absolute; top:-270px;"
+        />
+    </div>
+
     <profiles />
   </q-page>
 </template>

@@ -70,10 +70,10 @@ export default defineComponent({
     const router = useRouter()
 
     const player = reactive({
-      profileImage : ref("https://resimyukle.imageupload.workers.dev/nfbvNCz9_rectejunBW.png"),
-      nick : "RectejuN",
-      name : "Nihat Ünal Avunduk",
-      age : "28",
+      profileImage : ref("https://resimyukle.imageupload.workers.dev/giZrTmtl_danteBW.png"),
+      nick : "daNte7z7",
+      name : "Talha Deniz",
+      age : "25",
       description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 
       settings : {

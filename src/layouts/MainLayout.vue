@@ -1,15 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf" class="bg-sompo-dark">
-    <q-header elevated class="text-white bg-primary" height-hint="25">
-      <q-toolbar class="q-py-sm q-px-md">
 
-        <h6 class="text-white q-my-xs q-px-xs">IRONPUNCH</h6>
-
-        <q-space />
-
-      </q-toolbar>
-    </q-header>
-      
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -23,7 +14,7 @@
       </q-toolbar>
     </q-footer>
     -->
-    
+
   </q-layout>
 </template>
 
@@ -36,10 +27,10 @@ export default {
   },
   setup() {
     onMounted(async () => {
-      
+
     })
     return {
-      
+
     }
   },
 }

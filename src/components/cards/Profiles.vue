@@ -1,21 +1,24 @@
 <template>
-  <q-card class="bg-transparent no-shadow no-border q-pb-md">
-    <q-card-section class="q-pa-none">
+  <q-card class="bg-transparent no-shadow no-border">
+    <q-card-section class="q-pa-md">
       <div class="row flex-center">
         <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile1">
           <profile-1 />
         </div>
         <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile2">
-          <profile-1 />
+          <profile-2 />
         </div>
         <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile3">
-          <profile-1 />
+          <profile-3 />
         </div>
         <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile4">
-          <profile-1 />
+          <profile-4 />
         </div>
         <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile5">
-          <profile-1 />
+          <profile-5 />
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile3">
+          <profile-6 />
         </div>
       </div>
     </q-card-section>
@@ -30,7 +33,23 @@ export default {
   components: {
     Profile1: defineAsyncComponent(() =>
       import("src/components/cards/Profile1.vue")
+    ),
+    Profile2: defineAsyncComponent(() =>
+      import("src/components/cards/Profile2.vue")
+    ),
+    Profile3: defineAsyncComponent(() =>
+      import("src/components/cards/Profile3.vue")
+    ),
+    Profile4: defineAsyncComponent(() =>
+      import("src/components/cards/Profile4.vue")
+    ),
+    Profile5: defineAsyncComponent(() =>
+      import("src/components/cards/Profile5.vue")
+    ),
+    Profile6: defineAsyncComponent(() =>
+      import("src/components/cards/Profile6.vue")
     )
+
   },
 }
 </script>
@@ -114,5 +133,5 @@ export default {
     70%{ transform: scale(1); }
     100%{ transform: scale(1); }
   }
-  
+
 </style>

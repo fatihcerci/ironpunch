@@ -4,14 +4,14 @@
       <div class="q-pa-md row items-start q-gutter-md">
         <q-card class="bg-secondary text-white" flat>
           <q-img
-            src="~/assets/profile-images/ppnotfound.jpg"
+            src="~/assets/profile-images/h1k0BW.png"
           />
 
           <q-card-section>
             <div class="text-h5 text-center text-primary">
               {{ playerInfo.nick }}
             </div>
-            
+
             <div class="text-h6 q-mt-sm q-mb-xs">{{ playerInfo.name }}</div>
             <div class="text-h7 q-mb-xs">{{ playerInfo.age }} years old</div>
             <div class="text-caption text-grey">
@@ -70,7 +70,7 @@
             <q-card class="bg-transparent no-shadow no-border">
               <q-card-section class="">
                 <div class="row" >
-                  
+
                   <div class="col-lg-12 col-md-2 col-sm-12 col-xs-12 text-white">
 
                     <div class="row q-pb-md q-col-gutter-md" >
@@ -108,7 +108,7 @@
                         <div class="font-18 text-orange-4"> Mouse Acceleration </div>
                         <div class="font-16"> {{ playerInfo.settings.mouseSettings.mouseAcceleration }} </div>
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -127,7 +127,7 @@
             <q-card class="bg-transparent no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row" >
-                  
+
                   <div class="col-lg-12 col-md-2 col-sm-12 col-xs-12 text-white">
 
                     <div class="row q-pb-md q-col-gutter-md" >
@@ -152,8 +152,8 @@
                         <div class="font-16"> {{ playerInfo.settings.monitorSettings.hz }} </div>
                       </div>
 
-                      
-                      
+
+
                     </div>
                   </div>
                 </div>
@@ -171,13 +171,13 @@
             <q-card class="bg-transparent no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row">
-                  
+
                   <div class="col-lg-12 col-md-2 col-sm-12 col-xs-12 text-white">
 
                     <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" >
-                      
+
                         <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.crosshair }} </div>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -195,13 +195,13 @@
             <q-card class="bg-transparent no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row">
-                  
+
                   <div class="col-lg-12 col-md-2 col-sm-12 col-xs-12 text-white">
 
                     <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" >
-                      
+
                         <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.viewmodel }} </div>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -218,13 +218,13 @@
             <q-card class="bg-transparent no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row">
-                  
+
                   <div class="col-lg-12 col-md-2 col-sm-12 col-xs-12 text-white">
 
                     <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" >
-                      
+
                         <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.bob }} </div>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -242,30 +242,30 @@
             <q-card class="bg-transparent no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row" >
-                  
+
                   <div class="col-lg-12 col-md-2 col-sm-12 col-xs-12 text-white">
 
                     <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" >
-                      
+
                         <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.launchOptions }} </div>
-                      
+
                     </div>
                   </div>
                 </div>
               </q-card-section>
             </q-card>
           </q-expansion-item>
-          
+
         </q-list>
     </div>
 
   </div>
-  
+
   <q-page-sticky position="bottom-left" :offset="[18, 18]">
     <q-btn glossy color="primary" icon="keyboard_arrow_left" label="GO HOME" @click="goHome()" />
   </q-page-sticky>
 
-  
+
 </template>
 
 <script>
@@ -275,7 +275,7 @@ import settingsController from '../../controllers/settingsController'
 export default {
   name: "PlayerSettings",
   components: {
-  
+
   },
 
   setup() {
@@ -301,7 +301,7 @@ export default {
       goHome
     }
   }
-  
+
 }
 </script>
 
