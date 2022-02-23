@@ -1,5 +1,6 @@
 import Main from "layouts/MainLayout.vue"
 import Home from "pages/Home.vue"
+import Settings from "pages/Settings.vue"
 
 const routes = [
   /*{
@@ -49,6 +50,11 @@ const routes = [
       {
         path: "",
         component: Home,
+        meta: { requiresAuth: false },
+      },
+      {
+        path: "/settings",
+        component: Settings,
         meta: { requiresAuth: false },
       },
     ],

@@ -1,8 +1,8 @@
 {
-  "name": "com.lenora.sompo.ihale",
-  "displayName": "SOMPO - İhale Yöntemi ile Araç Satış Sistemi",
+  "name": "com.chercy.ironpunch",
+  "displayName": "IRONPUNCH | Since 2012",
   "version": "1.0.0",
-  "description": "SOMPO - İhale Yöntemi ile Araç Satış Sistemi",
+  "description": "IRONPUNCH | Since 2012",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
   "keywords": [
     "ecosystem:cordova"
   ],
-  "author": "lenorabilisim",
+  "author": "fatihcerci",
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^10.1.1",

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.lenora.sompo.ihale" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>SOMPO - İhale Yöntemi ile Araç Satış Sistemi</name>
-    <description>SOMPO - İhale Yöntemi ile Araç Satış Sistemi</description>
+<widget id="com.chercy.ironpunch" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>IRONPUNCH | Since 2012</name>
+    <description>IRONPUNCH - Since 2012</description>
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
         Apache Cordova Team
     </author>

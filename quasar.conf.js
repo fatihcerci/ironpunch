@@ -153,9 +153,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `SOMPO - İhale Yöntemi ile Araç Satış Sistemi`,
-        short_name: `SOMPO - İhale Yöntemi ile Araç Satış Sistemi`,
-        description: `SOMPO - İhale Yöntemi ile Araç Satış Sistemi`,
+        name: `IRONPUNCH | Since 2012`,
+        short_name: `IRONPUNCH | Since 2012`,
+        description: `IRONPUNCH | Since 2012`,
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',

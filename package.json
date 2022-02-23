@@ -1,9 +1,9 @@
 {
-  "name": "appraisal",
+  "name": "ironpunch",
   "version": "0.0.1",
-  "description": "SOMPO - İhale Yöntemi ile Araç Satış Sistemi",
-  "productName": "SOMPO - İhale Yöntemi ile Araç Satış Sistemi",
-  "author": "lenorabilisim",
+  "description": "IRONPUNCH | Since 2012",
+  "productName": "IRONPUNCH | Since 2012",
+  "author": "fatihcerci",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
