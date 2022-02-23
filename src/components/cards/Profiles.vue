@@ -45,7 +45,7 @@ export default {
   }
 
   .profile1:hover{
-    transform: scale(1.03);
+    transform: scale(1.02);
     transition: transform 0.5s;
   }
 
@@ -58,7 +58,7 @@ export default {
   }
 
   .profile2:hover{
-    transform: scale(1.03);
+    transform: scale(1.02);
     transition: transform 0.5s;
   }
 
@@ -71,7 +71,7 @@ export default {
   }
 
   .profile3:hover{
-    transform: scale(1.03);
+    transform: scale(1.02);
     transition: transform 0.5s;
   }
 
@@ -84,7 +84,7 @@ export default {
   }
 
   .profile4:hover{
-    transform: scale(1.03);
+    transform: scale(1.02);
     transition: transform 0.5s;
   }
 
@@ -97,7 +97,7 @@ export default {
   }
 
   .profile5:hover{
-    transform: scale(1.03);
+    transform: scale(1.02);
     transition: transform 0.5s;
   }
 

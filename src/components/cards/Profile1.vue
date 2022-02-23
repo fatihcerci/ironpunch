@@ -2,7 +2,7 @@
   <div class="q-pa-md row items-start q-gutter-md">
     <q-card class="bg-secondary text-white" flat>
       <q-img
-        src="https://cdn.quasar.dev/img/parallax2.jpg"
+        src="~/assets/profile-images/ppnotfound.jpg"
       />
 
       <q-card-section>
@@ -43,6 +43,14 @@
             </q-avatar>
 
         </div>
+      </q-card-section>
+
+      <q-separator />
+
+      <q-card-section class="row justify-center items-center">
+          <q-btn outline color="primary" icon="settings" label="SETTINGS" style="font-size: 0.8rem; width:47%;" class="" />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <q-btn outline color="primary" icon="leaderboard" label="STATS" style="font-size: 0.8rem; width:47%;" />
       </q-card-section>
 
     </q-card>
