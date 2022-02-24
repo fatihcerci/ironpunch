@@ -131,14 +131,14 @@ export default {
   }
 
   @-webkit-keyframes bounce-in {
-    0%{ opacity: 0; margin-top:25%; -webkit-transform: scale(1.0); transform: scale(1.0); }
+    0%{ opacity: 0; margin-top:50%; -webkit-transform: scale(1.0); transform: scale(1.0); }
     50%{ opacity: 1; -webkit-transform: scale(1.0); transform: scale(1.0); }
     70%{ -webkit-transform: scale(1); transform: scale(1); }
     100%{ -webkit-transform: scale(1); transform: scale(1); }
   }
 
   @keyframes bounce-in {
-    0%{ opacity: 0; margin-top:25%; transform: scale(1.0); }
+    0%{ opacity: 0; margin-top:50%; transform: scale(1.0); }
     50%{ opacity: 1; transform: scale(1.0); }
     70%{ transform: scale(1); }
     100%{ transform: scale(1); }
