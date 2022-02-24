@@ -150,7 +150,6 @@ const apiService = () => {
 
       const { data } = response
 
-      debugger
       faceitPlayer.value = data
     } catch (error) {
       throw error
@@ -186,7 +185,6 @@ const apiService = () => {
 
       faceitPlayerStats.value = data.lifetime
 
-      debugger
       let mapStats = []
       data.segments.forEach(element => {
         if(element.mode == "5v5") {
