@@ -6,15 +6,14 @@
       />
 
       <q-card-section>
-        
         <div class="text-h5 text-center text-primary">
           {{ nick }}
         </div>
 
         <div class="text-h6 text-grey-5 text-center q-mt-sm q-mb-xs">{{ name }}</div>
         <div class="text-h7 text-grey-5 text-center q-mb-xs">{{ age }} years old</div>
-        <div class="font-16 text-grey-5 text-center q-mb-xs"> <q-icon name="location_on" style="margin-bottom:2px;" /> {{ location }} </div>
-        
+        <div class="font-16 text-grey-5 text-center q-mb-xs"> <q-icon name="location_on" style="margin-bottom:2px;" />  {{ location }}  </div>
+
         <div class="text-caption text-grey text-center">
           <q-avatar size="24px">
             <img src="~/assets/flags/turkey.png" />
@@ -56,7 +55,7 @@
       <q-card-section class="row justify-center items-center">
           <q-btn outline color="primary" icon="settings" label="SETTINGS" style="font-size: 0.8rem; " @click="goSettings()" />
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <q-btn outline color="primary" icon="leaderboard" label="STATS" style="font-size: 0.8rem; " />
+          <q-btn outline color="primary" icon="leaderboard" label="STATS" style="font-size: 0.8rem; " @click="goStats()" />
       </q-card-section>
 
     </q-card>
@@ -66,26 +65,28 @@
 <script>
 import { defineComponent, reactive, toRefs, ref } from "vue"
 import { useRouter } from "vue-router"
-import settingsController from "../../controllers/settingsController"
+import playerController from "../../controllers/playerController"
+import apiService from "../../services/apiService"
 
 export default defineComponent({
-  name: "Profile1",
+  name: "Profile3",
 
   setup() {
 
     const router = useRouter()
 
-    const player = reactive({
+    const playerconfig = reactive({
       profileImage : ref("https://resimyukle.imageupload.workers.dev/83IsJiwv_ch3rcyBW.png"),
       nick : "ch3rcy",
+      faceitNick : "ch3rcy",
       name : "Fatih Çerçi",
       age : "27",
       location : "Ankara / Turkey",
       description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       socialMediaLinks : {
         facebook : null,
-        instagram : "https://instagram.com/",
-        youtube : "https://youtube.com/",
+        instagram : "https://instagram.com",
+        youtube : "https://youtube.com",
         twitch : "https://twitch.tv/",
         discord : "https://discord.gg/"
       },
@@ -117,19 +118,40 @@ export default defineComponent({
       }
     })
 
-    const { playerInfo } = settingsController()
+    const { playerInfo, player, playerStats, playerMapStats } = playerController()
+    const { faceitPlayerSearch, faceitPlayer, faceitPlayerStats, faceitPlayerMapStats, searchPlayer, getPlayer, getPlayerStats } = apiService()
 
     const goSettings = () => {
-      console.log(player)
-      playerInfo.value = player
+      console.log(playerconfig)
+      playerInfo.value = playerconfig
       router.push(`/settings`)
+    }
+
+    const goStats = async () => {
+      console.log(playerconfig)
+      playerInfo.value = playerconfig
+
+      await searchPlayer(playerInfo.value.faceitNick)
+
+      await getPlayer(faceitPlayerSearch.value.player_id)
+      player.value = faceitPlayer.value
+
+      console.log(player.value)
+
+      await getPlayerStats(faceitPlayer.value.player_id)
+      playerStats.value = faceitPlayerStats.value
+      playerMapStats.value = faceitPlayerMapStats.value
+
+      console.log(playerStats.value)
+
+      router.push(`/stats`)
     }
 
     var url = ref(`https://resimyukle.imageupload.workers.dev/mFMEkctd_cachuBW.png`)
 
     const getProfileImage = () => {
-      var url = ref(`~/assets/profile-images/${player.profileImage}`)
-      url.value = `~/assets/profile-images/${player.profileImage}`
+      var url = ref(`~/assets/profile-images/${playerconfig.profileImage}`)
+      url.value = `~/assets/profile-images/${playerconfig.profileImage}`
 
       return url
     }
@@ -144,10 +166,22 @@ export default defineComponent({
     return {
       url,
       router,
-      ...toRefs(player),
+      playerInfo,
+      player,
+      playerStats,
+      playerMapStats,
+      faceitPlayerSearch,
+      faceitPlayer,
+      faceitPlayerStats,
+      faceitPlayerMapStats,
+      ...toRefs(playerconfig),
       goSettings,
+      goStats,
       getProfileImage,
-      openLink
+      openLink,
+      searchPlayer,
+      getPlayer,
+      getPlayerStats
     }
   },
 })

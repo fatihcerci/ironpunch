@@ -8,7 +8,7 @@
           />
 
            <q-card-section>
-        
+
             <div class="text-h5 text-center text-primary">
               {{ playerInfo.nick }}
             </div>
@@ -262,11 +262,11 @@
             </q-card>
           </q-expansion-item>
 
-          
+
         </q-list>
     </div>
 
-    
+
 
   </div>
 
@@ -279,7 +279,7 @@
 
 <script>
 import { useRouter } from "vue-router"
-import settingsController from '../../controllers/settingsController'
+import playerController from '../../controllers/playerController'
 
 export default {
   name: "PlayerSettings",
@@ -290,7 +290,7 @@ export default {
   setup() {
     const router = useRouter()
 
-    const { playerInfo } = settingsController()
+    const { playerInfo } = playerController()
 
     const downloadConfig = () => {
       window.open(

@@ -3,9 +3,12 @@ import axios from "axios"
 import { Api } from "../helpers/api"
 import { Loading, QSpinnerFacebook } from "quasar"
 
+
 const api = axios.create({
-  baseURL: Api.Base.URL,
-  withCredentials: true,
+  headers: {
+    'Authorization': `Bearer 837312f2-81c6-4959-9fee-feb8e3ce61de`,
+    'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+  },
 })
 
 // Add a request interceptor

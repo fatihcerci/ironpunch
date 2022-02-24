@@ -23,7 +23,7 @@
         >
 
           <template v-slot:item="props" v-if="mode">
-            
+
             <div class="q-pa-none col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <q-card class="bg-secondary text-white">
                 <q-card-section>
@@ -67,7 +67,7 @@
                 </q-list>
               </q-card>
 
-              
+
             </div>
           </template>
 
@@ -135,7 +135,7 @@
               />
             </q-td>
           </template>
-      </q-table>
+        </q-table>
       </q-card>
     </div>
   </div>
@@ -150,10 +150,10 @@
       </q-card-section>
 
       <q-card-section class="row items-center">
-        <div class="font-16">İlgili ihale hakkında soru sorabilmeniz için kullanıcı girişi yapmanız gerekmektedir.</div> 
+        <div class="font-16">İlgili ihale hakkında soru sorabilmeniz için kullanıcı girişi yapmanız gerekmektedir.</div>
       </q-card-section>
       <q-card-section class="row items-center">
-        <div class="font-16">Kullanıcı hesabınız bulunmuyorsa Yeni Başvuru sayfasından kullanıcı başvurusu yapabilirsiniz.</div> 
+        <div class="font-16">Kullanıcı hesabınız bulunmuyorsa Yeni Başvuru sayfasından kullanıcı başvurusu yapabilirsiniz.</div>
       </q-card-section>
 
       <q-card-actions align="right">
@@ -165,7 +165,7 @@
 
 
   <q-dialog v-model="prompt">
-    
+
     <q-card style="min-width: 30vw;">
 
       <q-card-section class="row items-center q-pb-none">
@@ -178,7 +178,7 @@
         <div class="font-16">{{ info.referansNo }} </div>
       </q-card-section>
 
-      
+
 
       <q-separator class="q-mt-md" />
 
@@ -187,10 +187,10 @@
       </q-card-section>
 
       <q-card-section class="q-pt-lg">
-        <q-input 
+        <q-input
           autogrow
-          outlined 
-          autofocus 
+          outlined
+          autofocus
           clearable
           v-model="soru"
           maxlength="1024"
@@ -199,23 +199,23 @@
       </q-card-section>
 
       <q-card-actions class="q-pt-none q-pl-md q-pr-md justify-center no-wrap">
-        <q-btn 
+        <q-btn
           style="width: 50%"
-          color="primary" 
-          label="Soru Sor" 
+          color="primary"
+          label="Soru Sor"
           @click="requestInfo()" />
 
-          <q-btn 
+          <q-btn
           style="width: 50%"
-          label="Temizle" 
+          label="Temizle"
           color="secondary"
           @click="soru = ''" />
       </q-card-actions>
 
-      
+
     </q-card>
   </q-dialog>
-  
+
 </template>
 
 <script>
@@ -391,7 +391,7 @@ export default {
       return infoList.value ? infoList.value : null
     })
 
-    
+
 
     watch(claims, () => {
       updateTimer()
@@ -417,7 +417,7 @@ export default {
               var hours = Math.floor((distance % _day) / _hour)
               var minutes = Math.floor((distance % _hour) / _minute)
               var seconds = Math.floor((distance % _minute) / _second)
-              
+
               var kalanTitle = ""
               if(days > 0) {
                   kalanTitle = kalanTitle + days + " GÜN "
@@ -595,7 +595,7 @@ export default {
         } catch (e) {
           notify().error(e.message)
         }
-      } 
+      }
     }
 
     const getInfoList = async (row) => {

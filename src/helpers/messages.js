@@ -1,3 +1,3 @@
 export class Messages {
-    static get progress() { return "İşlem devam ediyor, lütfen bekleyiniz.." }
+    static get progress() { return "Processing, please wait.." }
 }

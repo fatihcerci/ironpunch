@@ -6,18 +6,20 @@
 import { defineAsyncComponent, ref, onMounted } from "vue"
 import { useRouter } from "vue-router"
 import playerController from "../controllers/playerController"
+import apiService from "../services/apiService"
 
 export default {
-  name: "Settings",
+  name: "Stats",
   components: {
     PlayerSettings: defineAsyncComponent(() =>
-      import("src/components/lists/PlayerSettings.vue")
+      import("src/components/lists/PlayerStats.vue")
     )
   },
 
   setup() {
     const router = useRouter()
-    const { playerInfo } = playerController()
+    const { playerInfo, player, playerStats } = playerController()
+    const { faceitPlayer, faceitPlayerStats, getPlayer, getPlayerStats } = apiService()
 
     onMounted(async () => {
       if(!playerInfo.value) {
@@ -26,7 +28,14 @@ export default {
     })
 
     return {
-
+      router,
+      playerInfo,
+      player,
+      playerStats,
+      faceitPlayer,
+      faceitPlayerStats,
+      getPlayer,
+      getPlayerStats
     }
   },
 }

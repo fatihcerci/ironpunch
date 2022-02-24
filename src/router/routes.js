@@ -1,6 +1,7 @@
 import Main from "layouts/MainLayout.vue"
 import Home from "pages/Home.vue"
 import Settings from "pages/Settings.vue"
+import Stats from "pages/Stats.vue"
 
 const routes = [
   /*{
@@ -57,9 +58,14 @@ const routes = [
         component: Settings,
         meta: { requiresAuth: false },
       },
+      {
+        path: "/stats",
+        component: Stats,
+        meta: { requiresAuth: false },
+      },
     ],
   },
-  
+
   {
     path: "/:catchAll(.*)*",
     component: () => import("pages/Error404.vue"),
