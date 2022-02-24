@@ -1,6 +1,6 @@
 <template>
-  <div class="row q-pb-xl q-col-gutter-md" >
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-white">
+  <div class="row q-pb-md" >
+    <div class="col-lg-3 q-pl-md col-md-3 col-sm-12 col-xs-12 text-white">
       <div class="q-pa-md row items-start q-gutter-md">
         <q-card class="bg-secondary text-white full-width" flat>
           <q-img
@@ -65,7 +65,7 @@
     </div>
 
 
-    <div class="col-lg-9 col-md-3 col-sm-12 col-xs-12 text-white">
+    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 text-white">
         <q-list class="bg-card no-border q-mt-md">
           <q-expansion-item
             :label="'MOUSE SETTINGS - ' + playerInfo.settings.mouseSettings.mouse"
