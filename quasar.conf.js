@@ -153,9 +153,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `IRONPUNCH | Since 2012`,
-        short_name: `IRONPUNCH | Since 2012`,
-        description: `IRONPUNCH | Since 2012`,
+        name: `IRONPUNCH Official Web Site`,
+        short_name: `IRONPUNCH Official Web Site`,
+        description: `IRONPUNCH Official Web Site`,
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',

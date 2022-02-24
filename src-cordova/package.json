@@ -1,8 +1,8 @@
 {
   "name": "com.chercy.ironpunch",
-  "displayName": "IRONPUNCH | Since 2012",
+  "displayName": "IRONPUNCH Official Web Site",
   "version": "1.0.0",
-  "description": "IRONPUNCH | Since 2012",
+  "description": "IRONPUNCH Official Web Site",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

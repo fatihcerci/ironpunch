@@ -21,23 +21,23 @@
       <q-card-section>
         <div class="q-gutter-x-sm text-center">
 
-            <q-avatar rounded class="cursor-pointer" size="24px">
+            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.facebook" @click="openLink(socialMediaLinks.facebook)">
               <img src="~/assets/social-media-icons/facebook.png" />
             </q-avatar>
 
-            <q-avatar rounded class="cursor-pointer" size="24px">
+            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.instagram" @click="openLink(socialMediaLinks.instagram)">
               <img src="~/assets/social-media-icons/instagram.png" />
             </q-avatar>
 
-            <q-avatar rounded class="cursor-pointer" size="24px">
+            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.youtube" @click="openLink(socialMediaLinks.youtube)">
               <img src="~/assets/social-media-icons/youtube.png" />
             </q-avatar>
 
-            <q-avatar rounded class="cursor-pointer" size="24px">
+            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.twitch" @click="openLink(socialMediaLinks.twitch)">
               <img src="~/assets/social-media-icons/twitch.png" />
             </q-avatar>
 
-            <q-avatar rounded class="cursor-pointer" size="24px">
+            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.discord" @click="openLink(socialMediaLinks.discord)">
               <img src="~/assets/social-media-icons/discord.png" />
             </q-avatar>
 
@@ -74,7 +74,13 @@ export default defineComponent({
       name : "Fatih Çerçi",
       age : "27",
       description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-
+      socialMediaLinks : {
+        facebook : null,
+        instagram : "https://instagram.com/",
+        youtube : "https://youtube.com/",
+        twitch : "https://twitch.tv/",
+        discord : "https://discord.gg/"
+      },
       settings : {
         mouseSettings : {
           mouse : "BENQ ZOWIE FK1",
@@ -120,12 +126,20 @@ export default defineComponent({
       return url
     }
 
+    const openLink = (link) => {
+      window.open(
+        link,
+        '_blank'
+      )
+    }
+
     return {
       url,
       router,
       ...toRefs(player),
       goSettings,
-      getProfileImage
+      getProfileImage,
+      openLink
     }
   },
 })

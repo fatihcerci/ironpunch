@@ -22,30 +22,30 @@
           <q-separator />
 
           <q-card-section>
-            <div class="q-gutter-x-sm text-center">
+        <div class="q-gutter-x-sm text-center">
 
-                <q-avatar rounded class="cursor-pointer" size="24px">
-                  <img src="~/assets/social-media-icons/facebook.png" />
-                </q-avatar>
+            <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.facebook" @click="openLink(playerInfo.socialMediaLinks.facebook)">
+              <img src="~/assets/social-media-icons/facebook.png" />
+            </q-avatar>
 
-                <q-avatar rounded class="cursor-pointer" size="24px">
-                  <img src="~/assets/social-media-icons/instagram.png" />
-                </q-avatar>
+            <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.instagram" @click="openLink(playerInfo.socialMediaLinks.instagram)">
+              <img src="~/assets/social-media-icons/instagram.png" />
+            </q-avatar>
 
-                <q-avatar rounded class="cursor-pointer" size="24px">
-                  <img src="~/assets/social-media-icons/youtube.png" />
-                </q-avatar>
+            <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.youtube" @click="openLink(playerInfo.socialMediaLinks.youtube)">
+              <img src="~/assets/social-media-icons/youtube.png" />
+            </q-avatar>
 
-                <q-avatar rounded class="cursor-pointer" size="24px">
-                  <img src="~/assets/social-media-icons/twitch.png" />
-                </q-avatar>
+            <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.twitch" @click="openLink(playerInfo.socialMediaLinks.twitch)">
+              <img src="~/assets/social-media-icons/twitch.png" />
+            </q-avatar>
 
-                <q-avatar rounded class="cursor-pointer" size="24px">
-                  <img src="~/assets/social-media-icons/discord.png" />
-                </q-avatar>
+            <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.discord" @click="openLink(playerInfo.socialMediaLinks.discord)">
+              <img src="~/assets/social-media-icons/discord.png" />
+            </q-avatar>
 
-            </div>
-          </q-card-section>
+        </div>
+      </q-card-section>
 
           <q-separator />
 
@@ -67,7 +67,7 @@
             header-class="text-white text-h6 bg-grey-9"
             expand-icon=" "
           >
-            <q-card class="bg-transparent no-shadow no-border">
+            <q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="">
                 <div class="row" >
 
@@ -124,7 +124,7 @@
             header-class="text-white text-h6 bg-grey-9"
             expand-icon=" "
           >
-            <q-card class="bg-transparent no-shadow no-border">
+            <q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row" >
 
@@ -168,7 +168,7 @@
             header-class="text-white text-h6 bg-grey-9"
             expand-icon=" "
           >
-            <q-card class="bg-transparent no-shadow no-border">
+            <q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row">
 
@@ -192,7 +192,7 @@
             header-class="text-white text-h6 bg-grey-9"
             expand-icon=" "
           >
-            <q-card class="bg-transparent no-shadow no-border">
+            <q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row">
 
@@ -215,7 +215,7 @@
             header-class="text-white text-h6 bg-grey-9"
             expand-icon=" "
           >
-            <q-card class="bg-transparent no-shadow no-border">
+            <q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row">
 
@@ -239,7 +239,7 @@
             header-class="text-white text-h6 bg-grey-9"
             expand-icon=" "
           >
-            <q-card class="bg-transparent no-shadow no-border">
+            <q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row" >
 
@@ -261,7 +261,7 @@
 
   </div>
 
-  <q-page-sticky position="bottom-left" :offset="[18, 18]">
+  <q-page-sticky position="bottom-left" :offset="[18, 55]" style="z-index:99999999">
     <q-btn glossy color="primary" icon="keyboard_arrow_left" label="GO HOME" @click="goHome()" />
   </q-page-sticky>
 
@@ -294,11 +294,19 @@ export default {
       router.push(`/`)
     }
 
+    const openLink = (link) => {
+      window.open(
+        link,
+        '_blank'
+      )
+    }
+
     return {
       router,
       playerInfo,
       downloadConfig,
-      goHome
+      goHome,
+      openLink
     }
   }
 
