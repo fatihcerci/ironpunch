@@ -261,7 +261,7 @@
 
   </div>
 
-  <q-page-sticky position="bottom-left" :offset="[18, 55]" style="z-index:99999999">
+  <q-page-sticky position="bottom-left" :offset="[18, 18]" style="z-index:99999999">
     <q-btn glossy color="primary" icon="keyboard_arrow_left" label="GO HOME" @click="goHome()" />
   </q-page-sticky>
 

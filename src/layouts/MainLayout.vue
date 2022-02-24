@@ -60,11 +60,13 @@
       <router-view />
     </q-page-container>
 
-    <q-toolbar class="bg-orange-5 text-white q-mt-xl">
-      <q-toolbar-title class="row justify-center items-center">
-        <div class="font-12">IRONPUNCH © 2022 All rights reserved</div>
-      </q-toolbar-title>
-    </q-toolbar>
+    <q-footer>
+        <q-toolbar class="bg-grey-9 text-white" style="min-height:40px;">
+        <q-toolbar-title class="row justify-center items-center">
+            <div class="font-12">IRONPUNCH © 2022 All rights reserved</div>
+        </q-toolbar-title>
+        </q-toolbar>
+    </q-footer>
 
   </q-layout>
 </template>
