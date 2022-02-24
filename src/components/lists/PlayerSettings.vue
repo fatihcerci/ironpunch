@@ -1,53 +1,59 @@
 <template>
-  <div class="row q-pb-md q-col-gutter-md" >
+  <div class="row q-pb-xl q-col-gutter-md" >
     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-white">
       <div class="q-pa-md row items-start q-gutter-md">
-        <q-card class="bg-secondary text-white" flat>
+        <q-card class="bg-secondary text-white full-width" flat>
           <q-img
             :src="playerInfo.profileImage"
           />
 
-          <q-card-section>
+           <q-card-section>
+        
             <div class="text-h5 text-center text-primary">
               {{ playerInfo.nick }}
             </div>
 
-            <div class="text-h6 q-mt-sm q-mb-xs">{{ playerInfo.name }}</div>
-            <div class="text-h7 q-mb-xs">{{ playerInfo.age }} years old</div>
-            <div class="text-caption text-grey">
-              {{ playerInfo.description }}
+            <div class="text-h6 text-grey-5 text-center q-mt-sm q-mb-xs">{{ playerInfo.name }}</div>
+            <div class="text-h7 text-grey-5 text-center q-mb-xs">{{ playerInfo.age }} years old</div>
+            <div class="font-16 text-grey-5 text-center q-mb-xs"> <q-icon name="location_on" style="margin-bottom:2px;" /> {{ playerInfo.location }} </div>
+
+            <div class="text-caption text-grey text-center">
+              <q-avatar size="24px">
+                <img src="~/assets/flags/turkey.png" />
+              </q-avatar>
             </div>
+
           </q-card-section>
 
           <q-separator />
 
+          <!--
           <q-card-section>
-        <div class="q-gutter-x-sm text-center">
+            <div class="q-gutter-x-sm text-center">
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.facebook" @click="openLink(playerInfo.socialMediaLinks.facebook)">
-              <img src="~/assets/social-media-icons/facebook.png" />
-            </q-avatar>
+                <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.facebook" @click="openLink(playerInfo.socialMediaLinks.facebook)">
+                  <img src="~/assets/social-media-icons/facebook.png" />
+                </q-avatar>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.instagram" @click="openLink(playerInfo.socialMediaLinks.instagram)">
-              <img src="~/assets/social-media-icons/instagram.png" />
-            </q-avatar>
+                <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.instagram" @click="openLink(playerInfo.socialMediaLinks.instagram)">
+                  <img src="~/assets/social-media-icons/instagram.png" />
+                </q-avatar>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.youtube" @click="openLink(playerInfo.socialMediaLinks.youtube)">
-              <img src="~/assets/social-media-icons/youtube.png" />
-            </q-avatar>
+                <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.youtube" @click="openLink(playerInfo.socialMediaLinks.youtube)">
+                  <img src="~/assets/social-media-icons/youtube.png" />
+                </q-avatar>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.twitch" @click="openLink(playerInfo.socialMediaLinks.twitch)">
-              <img src="~/assets/social-media-icons/twitch.png" />
-            </q-avatar>
+                <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.twitch" @click="openLink(playerInfo.socialMediaLinks.twitch)">
+                  <img src="~/assets/social-media-icons/twitch.png" />
+                </q-avatar>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.discord" @click="openLink(playerInfo.socialMediaLinks.discord)">
-              <img src="~/assets/social-media-icons/discord.png" />
-            </q-avatar>
+                <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.discord" @click="openLink(playerInfo.socialMediaLinks.discord)">
+                  <img src="~/assets/social-media-icons/discord.png" />
+                </q-avatar>
 
-        </div>
-      </q-card-section>
-
-          <q-separator />
+            </div>
+          </q-card-section>
+          -->
 
           <q-card-section class="row justify-center items-center">
               <q-btn glossy class="full-width" color="primary" icon="download" label="DOWNLOAD CONFIG / CFG" @click="downloadConfig()" />
@@ -256,13 +262,16 @@
             </q-card>
           </q-expansion-item>
 
+          
         </q-list>
     </div>
+
+    
 
   </div>
 
   <q-page-sticky position="bottom-left" :offset="[18, 18]" style="z-index:99999999">
-    <q-btn glossy color="primary" icon="keyboard_arrow_left" label="GO HOME" @click="goHome()" />
+    <q-btn size="md" round rounded glossy color="primary" icon="home" @click="goHome()"> <q-tooltip>GO HOME</q-tooltip> </q-btn>
   </q-page-sticky>
 
 

@@ -10,10 +10,16 @@
           {{ nick }}
         </div>
 
-        <div class="text-h6 q-mt-sm q-mb-xs">{{ name }}</div>
-        <div class="text-h7 q-mb-xs">{{ age }} years old</div>
-        <div class="text-caption text-grey">
+        <div class="text-h6 text-grey-5 text-center q-mt-sm q-mb-xs">{{ name }}</div>
+        <div class="text-h7 text-grey-5 text-center q-mb-xs">{{ age }} years old</div>
+        <div class="font-16 text-grey-5 text-center q-mb-xs"> <q-icon name="location_on" style="margin-bottom:2px;" />  {{ location }}  </div>
+        
+        <div class="text-caption text-grey text-center">
+          <q-avatar size="24px">
+            <img src="~/assets/flags/turkey.png" />
+          </q-avatar>
         </div>
+
       </q-card-section>
 
       <q-separator />
@@ -73,6 +79,7 @@ export default defineComponent({
       nick : "RectejuN",
       name : "Nihat Ünal Avunduk",
       age : "28",
+      location : "Istanbul / Turkey",
       description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       socialMediaLinks : {
         facebook : "https://facebook.com",
