@@ -2,7 +2,7 @@
   <div class="q-pa-md row items-start q-gutter-md">
     <q-card class="bg-secondary text-white" style="width:100%" flat>
       <q-img
-        :src="profileImage"
+        src="~/assets/profile-images/notfound.png"
       />
 
       <q-card-section>
@@ -69,10 +69,10 @@ export default defineComponent({
     const router = useRouter()
 
     const player = reactive({
-      profileImage : ref("https://resimyukle.imageupload.workers.dev/giZrTmtl_danteBW.png"),
-      nick : "daNte7z7",
-      name : "Talha Deniz",
-      age : "25",
+      profileImage : ref("https://resimyukle.imageupload.workers.dev/i9rkOf9u_carkinBW.png"),
+      nick : "ARCday1",
+      name : "Muhammed Aksoy",
+      age : "26",
       description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 
       settings : {

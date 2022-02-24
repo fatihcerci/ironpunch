@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md row items-start q-gutter-md">
-    <q-card class="bg-secondary text-white" flat>
+    <q-card class="bg-secondary text-white" style="width:100%" flat>
       <q-img
         :src="profileImage"
       />
@@ -13,7 +13,6 @@
         <div class="text-h6 q-mt-sm q-mb-xs">{{ name }}</div>
         <div class="text-h7 q-mb-xs">{{ age }} years old</div>
         <div class="text-caption text-grey">
-          {{ description }}
         </div>
       </q-card-section>
 

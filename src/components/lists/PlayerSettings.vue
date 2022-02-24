@@ -4,7 +4,7 @@
       <div class="q-pa-md row items-start q-gutter-md">
         <q-card class="bg-secondary text-white" flat>
           <q-img
-            src="~/assets/profile-images/h1k0BW.png"
+            :src="playerInfo.profileImage"
           />
 
           <q-card-section>

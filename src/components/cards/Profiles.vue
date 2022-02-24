@@ -17,8 +17,15 @@
         <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile5">
           <profile-5 />
         </div>
+        
+      </div>
+
+      <div class="row flex-center">
         <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile3">
           <profile-6 />
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile3">
+          <profile-7 />
         </div>
       </div>
     </q-card-section>
@@ -48,6 +55,9 @@ export default {
     ),
     Profile6: defineAsyncComponent(() =>
       import("src/components/cards/Profile6.vue")
+    ),
+    Profile7: defineAsyncComponent(() =>
+      import("src/components/cards/Profile7.vue")
     )
 
   },
