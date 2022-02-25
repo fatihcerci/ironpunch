@@ -14,11 +14,13 @@
         <div class="text-h7 text-grey-5 text-center q-mb-xs">{{ age }} years old</div>
         <div class="font-16 text-grey-5 text-center q-mb-xs"> <q-icon name="location_on" style="margin-bottom:2px;" />  {{ location }}  </div>
 
-        <div class="text-caption text-grey text-center">
-          <q-avatar size="24px">
-            <img src="~/assets/flags/turkey.png" />
-          </q-avatar>
-        </div>
+        <!--
+          <div class="text-caption text-grey text-center">
+            <q-avatar size="24px">
+              <img src="~/assets/flags/turkey.png" />
+            </q-avatar>
+          </div>
+        -->
 
       </q-card-section>
 
@@ -27,25 +29,35 @@
       <q-card-section>
         <div class="q-gutter-x-sm text-center">
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.facebook" @click="openLink(socialMediaLinks.facebook)">
-              <img src="~/assets/social-media-icons/facebook.png" />
-            </q-avatar>
+            <q-btn size="sm" round v-if="socialMediaLinks.facebook" @click="openLink(socialMediaLinks.facebook)">
+              <q-avatar rounded class="cursor-pointer" size="24px" >
+                <img src="~/assets/social-media-icons/facebook.png" />
+              </q-avatar>
+            </q-btn>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.instagram" @click="openLink(socialMediaLinks.instagram)">
-              <img src="~/assets/social-media-icons/instagram.png" />
-            </q-avatar>
+            <q-btn size="sm" round v-if="socialMediaLinks.instagram" @click="openLink(socialMediaLinks.instagram)">
+              <q-avatar rounded class="cursor-pointer" size="24px" >
+                <img src="~/assets/social-media-icons/instagram.png" />
+              </q-avatar>
+            </q-btn>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.youtube" @click="openLink(socialMediaLinks.youtube)">
-              <img src="~/assets/social-media-icons/youtube.png" />
-            </q-avatar>
+            <q-btn size="sm" round v-if="socialMediaLinks.twitter" @click="openLink(socialMediaLinks.twitter)">
+              <q-avatar rounded class="cursor-pointer" size="24px" >
+                <img src="~/assets/social-media-icons/twitter.png" />
+              </q-avatar>
+            </q-btn>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.twitch" @click="openLink(socialMediaLinks.twitch)">
-              <img src="~/assets/social-media-icons/twitch.png" />
-            </q-avatar>
+            <q-btn size="sm" round v-if="socialMediaLinks.twitch" @click="openLink(socialMediaLinks.twitch)">
+              <q-avatar rounded class="cursor-pointer" size="24px" >
+                <img src="~/assets/social-media-icons/twitch.png" />
+              </q-avatar>
+            </q-btn>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.discord" @click="openLink(socialMediaLinks.discord)">
-              <img src="~/assets/social-media-icons/discord.png" />
-            </q-avatar>
+            <q-btn size="sm" round v-if="socialMediaLinks.steam" @click="openLink(socialMediaLinks.steam)">
+              <q-avatar rounded class="cursor-pointer" size="24px" >
+                <img src="~/assets/social-media-icons/steam.png" />
+              </q-avatar>
+            </q-btn>
 
         </div>
       </q-card-section>
@@ -76,7 +88,7 @@ export default defineComponent({
     const router = useRouter()
 
     const playerconfig = reactive({
-      profileImage : ref("https://resimyukle.imageupload.workers.dev/mFMEkctd_cachuBW.png"),
+      profileImage : "cachuBW.png",
       nick : "Cachu",
       faceitNick : "Cachu-",
       name : "Eray Özkur",
@@ -86,9 +98,9 @@ export default defineComponent({
       socialMediaLinks : {
         facebook : "https://facebook.com",
         instagram : "https://instagram.com",
-        youtube : null,
+        twitter : null,
         twitch : null,
-        discord : "https://discord.gg/"
+        steam : "https://discord.gg/"
       },
       settings : {
         mouseSettings : {
@@ -141,15 +153,6 @@ export default defineComponent({
       router.push(`/stats`)
     }
 
-    var url = ref(`https://resimyukle.imageupload.workers.dev/mFMEkctd_cachuBW.png`)
-
-    const getProfileImage = () => {
-      var url = ref(`~/assets/profile-images/${playerconfig.profileImage}`)
-      url.value = `~/assets/profile-images/${playerconfig.profileImage}`
-
-      return url
-    }
-
     const openLink = (link) => {
       window.open(
         link,
@@ -158,7 +161,6 @@ export default defineComponent({
     }
 
     return {
-      url,
       router,
       playerInfo,
       player,
@@ -171,7 +173,6 @@ export default defineComponent({
       ...toRefs(playerconfig),
       goSettings,
       goStats,
-      getProfileImage,
       openLink,
       searchPlayer,
       getPlayer,

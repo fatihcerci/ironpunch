@@ -11,7 +11,7 @@ const playerController = () => {
     playerInfo,
     player,
     playerStats,
-    playerMapStats
+    playerMapStats,
   }
 }
 export default playerController

@@ -14,11 +14,13 @@
         <div class="text-h7 text-grey-5 text-center q-mb-xs">{{ age }} years old</div>
         <div class="font-16 text-grey-5 text-center q-mb-xs"> <q-icon name="location_on" style="margin-bottom:2px;" />  {{ location }}  </div>
 
-        <div class="text-caption text-grey text-center">
-          <q-avatar size="24px">
-            <img src="~/assets/flags/turkey.png" />
-          </q-avatar>
-        </div>
+        <!--
+          <div class="text-caption text-grey text-center">
+            <q-avatar size="24px">
+              <img src="~/assets/flags/turkey.png" />
+            </q-avatar>
+          </div>
+        -->
 
       </q-card-section>
 
@@ -27,25 +29,35 @@
       <q-card-section>
         <div class="q-gutter-x-sm text-center">
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.facebook" @click="openLink(socialMediaLinks.facebook)">
-              <img src="~/assets/social-media-icons/facebook.png" />
-            </q-avatar>
+            <q-btn size="sm" round v-if="socialMediaLinks.facebook" @click="openLink(socialMediaLinks.facebook)">
+              <q-avatar rounded class="cursor-pointer" size="24px" >
+                <img src="~/assets/social-media-icons/facebook.png" />
+              </q-avatar>
+            </q-btn>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.instagram" @click="openLink(socialMediaLinks.instagram)">
-              <img src="~/assets/social-media-icons/instagram.png" />
-            </q-avatar>
+            <q-btn size="sm" round v-if="socialMediaLinks.instagram" @click="openLink(socialMediaLinks.instagram)">
+              <q-avatar rounded class="cursor-pointer" size="24px" >
+                <img src="~/assets/social-media-icons/instagram.png" />
+              </q-avatar>
+            </q-btn>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.youtube" @click="openLink(socialMediaLinks.youtube)">
-              <img src="~/assets/social-media-icons/youtube.png" />
-            </q-avatar>
+            <q-btn size="sm" round v-if="socialMediaLinks.twitter" @click="openLink(socialMediaLinks.twitter)">
+              <q-avatar rounded class="cursor-pointer" size="24px" >
+                <img src="~/assets/social-media-icons/twitter.png" />
+              </q-avatar>
+            </q-btn>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.twitch" @click="openLink(socialMediaLinks.twitch)">
-              <img src="~/assets/social-media-icons/twitch.png" />
-            </q-avatar>
+            <q-btn size="sm" round v-if="socialMediaLinks.twitch" @click="openLink(socialMediaLinks.twitch)">
+              <q-avatar rounded class="cursor-pointer" size="24px" >
+                <img src="~/assets/social-media-icons/twitch.png" />
+              </q-avatar>
+            </q-btn>
 
-            <q-avatar rounded class="cursor-pointer" size="24px" v-if="socialMediaLinks.discord" @click="openLink(socialMediaLinks.discord)">
-              <img src="~/assets/social-media-icons/discord.png" />
-            </q-avatar>
+            <q-btn size="sm" round v-if="socialMediaLinks.steam" @click="openLink(socialMediaLinks.steam)">
+              <q-avatar rounded class="cursor-pointer" size="24px" >
+                <img src="~/assets/social-media-icons/steam.png" />
+              </q-avatar>
+            </q-btn>
 
         </div>
       </q-card-section>
@@ -76,7 +88,7 @@ export default defineComponent({
     const router = useRouter()
 
     const playerconfig = reactive({
-      profileImage : ref("https://resimyukle.imageupload.workers.dev/83IsJiwv_ch3rcyBW.png"),
+      profileImage : "ch3rcyBW.png",
       nick : "ch3rcy",
       faceitNick : "ch3rcy",
       name : "Fatih Çerçi",
@@ -85,10 +97,10 @@ export default defineComponent({
       description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       socialMediaLinks : {
         facebook : null,
-        instagram : "https://instagram.com",
-        youtube : "https://youtube.com",
-        twitch : "https://twitch.tv/",
-        discord : "https://discord.gg/"
+        instagram : "https://www.instagram.com/chercy.tv/",
+        twitter : "https://www.youtube.com/channel/UCWakOeQ0mt5MIITbDkemRww",
+        twitch : "https://www.twitch.tv/chercyTV",
+        steam : "https://store.steampowered.com/"
       },
       settings : {
         mouseSettings : {
@@ -97,23 +109,23 @@ export default defineComponent({
           sensitivity : "1.6",
           rawInput : "Off",
           hz : "1000",
-          zoomSensitivity : "1.00",
+          zoomSensitivity : "0.97",
           windowsSensitivity : "6/11",
           mouseAcceleration :  "On"
         },
         monitorSettings : {
           monitor : 'ASUS V278QR 27" 165Hz',
-          resolution : "1280x960",
+          resolution : "1024x768",
           aspectRatio : "4:3",
           scalingMode : "Stretched",
           hz : "165"
         },
-        crosshair : "cl_crosshaircolor 0; cl_crosshair_size 3; cl_crosshairgap 0;",
+        crosshair : "cl_crosshair_drawoutline 0; cl_crosshairstyle 4; cl_crosshairthickness 0.5; cl_crosshaircolor 1; cl_crosshair_size 3; cl_crosshairgap 0; cl_crosshair_sniper_width 1;",
         viewmodel : "viewmodel_fov 60; viewmodel_offset_x 1; viewmodel_offset_y 1; viewmodel_offset_z -1; viewmodel_presetpos 0; viewmodel_recoil 1; cl_righthand 0;",
-        bob : "cl_bob_lower_amt 21; cl_bobamt_lat 0.33; cl_bobamt_vert 0.14; cl_bobcycle 0.8;",
+        bob : "cl_bob_lower_amt 21; cl_bobamt_lat 0.4; cl_bobamt_vert 0.25; cl_bobcycle 0.8;",
         launchOptions : "-refresh 165 -console -novid -tickrate 128 -noforcemaccel -noforcemparms -noforcemspd",
 
-        configUrl : "https://mediafire.com/"
+        configUrl : "https://www.mediafire.com/file/7e59twxfue1jy3p/ch3rcy.zip/file"
 
       }
     })
@@ -147,15 +159,6 @@ export default defineComponent({
       router.push(`/stats`)
     }
 
-    var url = ref(`https://resimyukle.imageupload.workers.dev/mFMEkctd_cachuBW.png`)
-
-    const getProfileImage = () => {
-      var url = ref(`~/assets/profile-images/${playerconfig.profileImage}`)
-      url.value = `~/assets/profile-images/${playerconfig.profileImage}`
-
-      return url
-    }
-
     const openLink = (link) => {
       window.open(
         link,
@@ -164,7 +167,6 @@ export default defineComponent({
     }
 
     return {
-      url,
       router,
       playerInfo,
       player,
@@ -177,7 +179,6 @@ export default defineComponent({
       ...toRefs(playerconfig),
       goSettings,
       goStats,
-      getProfileImage,
       openLink,
       searchPlayer,
       getPlayer,

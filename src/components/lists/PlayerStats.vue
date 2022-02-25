@@ -1,4 +1,5 @@
 <template>
+
   <div class="row q-pb-md" >
     <div class="col-lg-3 q-pl-md col-md-3 col-sm-12 col-xs-12 text-white">
       <div class="q-pa-md row items-start q-gutter-md">
@@ -17,11 +18,13 @@
             <div class="text-h7 text-grey-5 text-center q-mb-xs">{{ playerInfo.age }} years old</div>
             <div class="font-16 text-grey-5 text-center q-mb-xs"> <q-icon name="location_on" style="margin-bottom:2px;" /> {{ playerInfo.location }} </div>
 
+            <!--
             <div class="text-caption text-grey text-center">
               <q-avatar size="24px">
                 <img src="~/assets/flags/turkey.png" />
               </q-avatar>
             </div>
+            -->
 
           </q-card-section>
 
@@ -30,25 +33,35 @@
           <q-card-section>
             <div class="q-gutter-x-sm text-center">
 
-                <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.facebook" @click="openLink(playerInfo.socialMediaLinks.facebook)">
+              <q-btn size="sm" round v-if="playerInfo.socialMediaLinks.facebook" @click="openLink(playerInfo.socialMediaLinks.facebook)">
+                <q-avatar rounded class="cursor-pointer" size="24px" >
                   <img src="~/assets/social-media-icons/facebook.png" />
                 </q-avatar>
+              </q-btn>
 
-                <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.instagram" @click="openLink(playerInfo.socialMediaLinks.instagram)">
+              <q-btn size="sm" round v-if="playerInfo.socialMediaLinks.instagram" @click="openLink(playerInfo.socialMediaLinks.instagram)">
+                <q-avatar rounded class="cursor-pointer" size="24px" >
                   <img src="~/assets/social-media-icons/instagram.png" />
                 </q-avatar>
+              </q-btn>
 
-                <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.youtube" @click="openLink(playerInfo.socialMediaLinks.youtube)">
-                  <img src="~/assets/social-media-icons/youtube.png" />
+              <q-btn size="sm" round v-if="playerInfo.socialMediaLinks.twitter" @click="openLink(playerInfo.socialMediaLinks.twitter)">
+                <q-avatar rounded class="cursor-pointer" size="24px" >
+                  <img src="~/assets/social-media-icons/twitter.png" />
                 </q-avatar>
+              </q-btn>
 
-                <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.twitch" @click="openLink(playerInfo.socialMediaLinks.twitch)">
+              <q-btn size="sm" round v-if="playerInfo.socialMediaLinks.twitch" @click="openLink(playerInfo.socialMediaLinks.twitch)">
+                <q-avatar rounded class="cursor-pointer" size="24px" >
                   <img src="~/assets/social-media-icons/twitch.png" />
                 </q-avatar>
+              </q-btn>
 
-                <q-avatar rounded class="cursor-pointer" size="24px" v-if="playerInfo.socialMediaLinks.discord" @click="openLink(playerInfo.socialMediaLinks.discord)">
-                  <img src="~/assets/social-media-icons/discord.png" />
+              <q-btn size="sm" round v-if="playerInfo.socialMediaLinks.steam" @click="openLink(playerInfo.socialMediaLinks.steam)">
+                <q-avatar rounded class="cursor-pointer" size="24px" >
+                  <img src="~/assets/social-media-icons/steam.png" />
                 </q-avatar>
+              </q-btn>
 
             </div>
           </q-card-section>
@@ -82,7 +95,9 @@
                     <div class="row q-pb-md q-col-gutter-md" >
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Skill Level </div>
-                        <div class="font-16"> {{ player.games["csgo"].skill_level }} </div>
+                        <q-avatar rounded class="cursor-pointer " size="28px">
+                          <img :src="getSkillLevelImage(player.games['csgo'].skill_level)" />
+                        </q-avatar>
                       </div>
 
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
@@ -315,6 +330,10 @@ export default {
       return (window.screen.width - 70).toString()
     }
 
+    let getSkillLevelImage = (skill_level) => {
+      return "skill_level_" + skill_level + ".svg"
+    }
+
     return {
       columns,
       router,
@@ -326,7 +345,8 @@ export default {
       downloadConfig,
       goHome,
       openLink,
-      imageSize
+      imageSize,
+      getSkillLevelImage
     }
   }
 
