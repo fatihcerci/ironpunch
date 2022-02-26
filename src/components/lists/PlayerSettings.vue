@@ -196,9 +196,9 @@
                 <div class="row">
 
                   <div class="row col-lg-12 col-sm-12 col-xs-12 text-white">
-					<q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard(playerInfo.settings.crosshair)"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
+					<q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard('crosshair')"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
                     <div class=" q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" style="width:95%">
-                        <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.crosshair }} </div>
+                        <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm" id="crosshair"> {{ playerInfo.settings.crosshair }} </div>
                     </div>
                   </div>
                 </div>
@@ -213,14 +213,14 @@
             header-class="text-white text-h6 bg-grey-9"
             expand-icon=" "
           >
-			<q-card class="bg-secondary no-shadow no-border">
+			      <q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row">
 
                   <div class="row col-lg-12 col-sm-12 col-xs-12 text-white">
-					<q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard(playerInfo.settings.viewmodel)"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
+					          <q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard('viewmodel')"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
                     <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" style="width:95%" >
-                        <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.viewmodel }} </div>
+                        <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm" id="viewmodel"> {{ playerInfo.settings.viewmodel }} </div>
                     </div>
                   </div>
                 </div>
@@ -236,14 +236,14 @@
             header-class="text-white text-h6 bg-grey-9"
             expand-icon=" "
           >
-			<q-card class="bg-secondary no-shadow no-border">
+            <q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row">
 
                   <div class="row col-lg-12 col-sm-12 col-xs-12 text-white">
-					<q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard(playerInfo.settings.bob)"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
+					          <q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard('bob')"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
                     <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" style="width:95%" >
-                        <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.bob }} </div>
+                        <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm" id="bob"> {{ playerInfo.settings.bob }} </div>
                     </div>
                   </div>
                 </div>
@@ -259,14 +259,14 @@
             expand-icon=" "
           >
 
-			<q-card class="bg-secondary no-shadow no-border">
+			      <q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row">
 
                   <div class="row col-lg-12 col-sm-12 col-xs-12 text-white">
-					<q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard(playerInfo.settings.launchOptions)"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
+					          <q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard('launchOptions')"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
                     <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" style="width:95%" >
-                        <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.launchOptions }} </div>
+                        <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm" id="launchOptions"> {{ playerInfo.settings.launchOptions }} </div>
                     </div>
                   </div>
                 </div>
@@ -326,9 +326,37 @@ export default {
       )
     }
 
-	const copyToClipboard = (text) => {
-      navigator.clipboard.writeText(text)
-	  notify().success("Copied!", "center")
+	  const copyToClipboard = (id) => {
+      var sel, range
+      var el = document.getElementById(id) //get element id
+
+      if (window.getSelection && document.createRange) { //Browser compatibility
+        sel = window.getSelection()
+        sel.removeAllRanges()
+        if(sel.toString() == ''){ //no text selection
+          window.setTimeout(function(){
+            range = document.createRange() //range object
+            range.selectNodeContents(el) //sets Range
+            sel.removeAllRanges() //remove all ranges from selection
+            sel.addRange(range)//add Range to a Selection.
+
+            document.execCommand('copy')
+            notify().success("Copied!", "center")
+          },1)
+        }
+      } else if (document.selection) { //older ie
+        sel = document.selection.createRange()
+        sel.removeAllRanges()
+        if(sel.text == ''){ //no text selection
+          range = document.body.createTextRange()//Creates TextRange object
+          range.moveToElementText(el)//sets Range
+          range.select()//make selection.
+
+          document.execCommand('copy')
+          notify().success("Copied!", "center")
+        }
+      }
+
     }
 
     return {
