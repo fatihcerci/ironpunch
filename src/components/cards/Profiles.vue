@@ -15,17 +15,17 @@
           <profile-5 />
         </div>
         <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile5">
-          <profile-4 />
+          <profile-6 />
         </div>
 
       </div>
 
       <div class="row flex-center">
         <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile3">
-          <profile-6 />
+          <profile-7 />
         </div>
         <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 cursor-pointer profile3">
-          <profile-7 />
+          <profile-4 />
         </div>
       </div>
     </q-card-section>
