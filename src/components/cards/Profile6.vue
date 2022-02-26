@@ -106,6 +106,7 @@ export default defineComponent({
         mouseSettings : {
           mouse : "BENQ ZOWIE FK1",
           dpi : "400",
+		  edpi : "640",
           sensitivity : "1.6",
           rawInput : "Off",
           hz : "1000",

@@ -94,37 +94,42 @@
                     <div class="row q-pb-md q-col-gutter-md" >
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> DPI </div>
-                        <div class="font-16"> {{ playerInfo.settings.mouseSettings.dpi }} </div>
+                        <div class="font-18"> {{ playerInfo.settings.mouseSettings.dpi }} </div>
                       </div>
 
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Sensitivity </div>
-                        <div class="font-16"> {{ playerInfo.settings.mouseSettings.sensitivity }} </div>
+                        <div class="font-18"> {{ playerInfo.settings.mouseSettings.sensitivity }} </div>
+                      </div>
+
+					  <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
+                        <div class="font-18 text-orange-4"> eDPI </div>
+                        <div class="font-18"> {{ playerInfo.settings.mouseSettings.edpi }} </div>
                       </div>
 
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Raw Input </div>
-                        <div class="font-16"> {{ playerInfo.settings.mouseSettings.rawInput }} </div>
+                        <div class="font-18"> {{ playerInfo.settings.mouseSettings.rawInput }} </div>
                       </div>
 
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Polling Rate (Hz) </div>
-                        <div class="font-16"> {{ playerInfo.settings.mouseSettings.hz }} </div>
+                        <div class="font-18"> {{ playerInfo.settings.mouseSettings.hz }} </div>
                       </div>
 
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Zoom Sensitivity </div>
-                        <div class="font-16"> {{ playerInfo.settings.mouseSettings.zoomSensitivity }} </div>
+                        <div class="font-18"> {{ playerInfo.settings.mouseSettings.zoomSensitivity }} </div>
                       </div>
 
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Windows Sensitivity </div>
-                        <div class="font-16"> {{ playerInfo.settings.mouseSettings.windowsSensitivity }} </div>
+                        <div class="font-18"> {{ playerInfo.settings.mouseSettings.windowsSensitivity }} </div>
                       </div>
 
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Mouse Acceleration </div>
-                        <div class="font-16"> {{ playerInfo.settings.mouseSettings.mouseAcceleration }} </div>
+                        <div class="font-18"> {{ playerInfo.settings.mouseSettings.mouseAcceleration }} </div>
                       </div>
 
                     </div>
@@ -152,22 +157,22 @@
 
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Resolution </div>
-                        <div class="font-16"> {{ playerInfo.settings.monitorSettings.resolution }} </div>
+                        <div class="font-18"> {{ playerInfo.settings.monitorSettings.resolution }} </div>
                       </div>
 
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Aspect Ratio </div>
-                        <div class="font-16"> {{ playerInfo.settings.monitorSettings.aspectRatio }} </div>
+                        <div class="font-18"> {{ playerInfo.settings.monitorSettings.aspectRatio }} </div>
                       </div>
 
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Scaling Mode </div>
-                        <div class="font-16"> {{ playerInfo.settings.monitorSettings.scalingMode }} </div>
+                        <div class="font-18"> {{ playerInfo.settings.monitorSettings.scalingMode }} </div>
                       </div>
 
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Refresh (Hz) </div>
-                        <div class="font-16"> {{ playerInfo.settings.monitorSettings.hz }} </div>
+                        <div class="font-18"> {{ playerInfo.settings.monitorSettings.hz }} </div>
                       </div>
 
 
@@ -190,12 +195,10 @@
               <q-card-section class="q-pa-md">
                 <div class="row">
 
-                  <div class="col-lg-12 col-md-2 col-sm-12 col-xs-12 text-white">
-
-                    <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" >
-
+                  <div class="row col-lg-12 col-sm-12 col-xs-12 text-white">
+					<q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard(playerInfo.settings.crosshair)"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
+                    <div class=" q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" style="width:95%">
                         <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.crosshair }} </div>
-
                     </div>
                   </div>
                 </div>
@@ -210,21 +213,21 @@
             header-class="text-white text-h6 bg-grey-9"
             expand-icon=" "
           >
-            <q-card class="bg-secondary no-shadow no-border">
+			<q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row">
 
-                  <div class="col-lg-12 col-md-2 col-sm-12 col-xs-12 text-white">
-
-                    <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" >
-
+                  <div class="row col-lg-12 col-sm-12 col-xs-12 text-white">
+					<q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard(playerInfo.settings.viewmodel)"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
+                    <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" style="width:95%" >
                         <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.viewmodel }} </div>
-
                     </div>
                   </div>
                 </div>
               </q-card-section>
             </q-card>
+
+
           </q-expansion-item>
 
           <q-expansion-item
@@ -233,16 +236,14 @@
             header-class="text-white text-h6 bg-grey-9"
             expand-icon=" "
           >
-            <q-card class="bg-secondary no-shadow no-border">
+			<q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="q-pa-md">
                 <div class="row">
 
-                  <div class="col-lg-12 col-md-2 col-sm-12 col-xs-12 text-white">
-
-                    <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" >
-
+                  <div class="row col-lg-12 col-sm-12 col-xs-12 text-white">
+					<q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard(playerInfo.settings.bob)"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
+                    <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" style="width:95%" >
                         <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.bob }} </div>
-
                     </div>
                   </div>
                 </div>
@@ -257,16 +258,15 @@
             header-class="text-white text-h6 bg-grey-9"
             expand-icon=" "
           >
-            <q-card class="bg-secondary no-shadow no-border">
+
+			<q-card class="bg-secondary no-shadow no-border">
               <q-card-section class="q-pa-md">
-                <div class="row" >
+                <div class="row">
 
-                  <div class="col-lg-12 col-md-2 col-sm-12 col-xs-12 text-white">
-
-                    <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" >
-
+                  <div class="row col-lg-12 col-sm-12 col-xs-12 text-white">
+					<q-icon name="content_copy" class="q-pt-sm cursor-pointer" color="primary" size="30px" v-if="$q.screen.gt.sm" @click="copyToClipboard(playerInfo.settings.launchOptions)"> <q-tooltip>Copy to Clipboard</q-tooltip>  </q-icon>
+                    <div class="row q-mt-xs q-ml-xs q-mr-xs bg-sompo-dark" style="width:95%" >
                         <div class="font-16 q-pt-sm q-pb-sm q-pl-sm q-pr-sm"> {{ playerInfo.settings.launchOptions }} </div>
-
                     </div>
                   </div>
                 </div>
@@ -291,7 +291,9 @@
 
 <script>
 import { useRouter } from "vue-router"
+import { useQuasar } from "quasar"
 import playerController from '../../controllers/playerController'
+import notify from "../../helpers/notification"
 
 export default {
   name: "PlayerSettings",
@@ -301,6 +303,8 @@ export default {
 
   setup() {
     const router = useRouter()
+
+	const $q = useQuasar()
 
     const { playerInfo } = playerController()
 
@@ -322,12 +326,18 @@ export default {
       )
     }
 
+	const copyToClipboard = (text) => {
+      navigator.clipboard.writeText(text)
+	  notify().success("Copied!", "center")
+    }
+
     return {
       router,
       playerInfo,
       downloadConfig,
       goHome,
-      openLink
+      openLink,
+	  copyToClipboard
     }
   }
 

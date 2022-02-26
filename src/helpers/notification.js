@@ -8,6 +8,7 @@ const notification = () => {
       textColor: "dark",
       icon: "warning",
       position: !pos ? "bottom" : pos,
+	  timeout: 500
     })
   }
 
@@ -17,6 +18,7 @@ const notification = () => {
       textColor: "dark",
       color: "info",
       position: !pos ? "bottom" : pos,
+	  timeout: 500
     })
   }
 
@@ -27,6 +29,7 @@ const notification = () => {
       textColor: "dark",
       message: message,
       icon: "report_problem",
+	  timeout: 500
     })
   }
 
@@ -34,8 +37,9 @@ const notification = () => {
     Notify.create({
       message: message,
       textColor: "white",
-      color: "positive",
+      color: "orange-5",
       position: !pos ? "bottom" : pos,
+	  timeout: 500
     })
   }
   return {
