@@ -92,47 +92,97 @@
 
                   <div class="col-lg-12 col-md-2 col-sm-12 col-xs-12 text-white">
 
-                    <div class="row q-pb-md q-col-gutter-md" >
-                      <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
-                        <div class="font-18 text-orange-4"> Skill Level </div>
+                    <div class="row q-pb-xs q-col-gutter-md" >
+                      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                        <!---
+						<div class="font-18 text-orange-4"> Skill Level </div>
                         <q-avatar rounded class="cursor-pointer " size="28px">
                           <img :src="getSkillLevelImage(player.games['csgo'].skill_level)" />
                         </q-avatar>
+						-->
+
+						<q-card class="bg-dark q-pa-sm text-center">
+							<div class="font-18 text-yellow-8"> SKILL LEVEL </div>
+							<q-avatar rounded class="cursor-pointer " size="28px">
+								<img :src="getSkillLevelImage(player.games['csgo'].skill_level)" />
+							</q-avatar>
+						</q-card>
+
                       </div>
 
-                      <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
-                        <div class="font-18 text-orange-4"> ELO </div>
+                      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                        <!--
+							<div class="font-18 text-orange-4"> ELO </div>
                         <div class="font-16"> {{ player.games["csgo"].faceit_elo }} </div>
+						-->
+
+						<q-card class="bg-dark q-pa-sm text-center">
+							<div class="font-18 text-yellow-8"> ELO </div>
+							<div class="font-18"> {{ player.games["csgo"].faceit_elo }} </div>
+						</q-card>
+
                       </div>
 
-                      <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
-                        <div class="font-18 text-orange-4"> Matches </div>
+                      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                        <!--
+							<div class="font-18 text-orange-4"> Matches </div>
                         <div class="font-16"> {{ playerStats["Matches"] }} </div>
+						-->
+
+						<q-card class="bg-dark q-pa-sm text-center">
+							<div class="font-18 text-yellow-8"> MATCHES </div>
+                        	<div class="font-18"> {{ playerStats["Matches"] }} </div>
+						</q-card>
                       </div>
 
+					<!--
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Wins </div>
                         <div class="font-16"> {{ playerStats["Wins"] }} </div>
                       </div>
+					  -->
 
-                      <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
+                      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						  <!--
                         <div class="font-18 text-orange-4"> Win Rate % </div>
                         <div class="font-16"> {{ playerStats["Win Rate %"] }} </div>
+						-->
+
+						<q-card class="bg-dark q-pa-sm text-center">
+							<div class="font-18 text-yellow-8"> WIN RATE % </div>
+                        	<div class="font-18"> {{ playerStats["Win Rate %"] }} </div>
+						</q-card>
                       </div>
 
+						<!--
                       <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                         <div class="font-18 text-orange-4"> Longest Win Streak </div>
                         <div class="font-16"> {{ playerStats["Longest Win Streak"] }} </div>
                       </div>
+					  -->
 
-                      <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
+                      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						  <!--
                         <div class="font-18 text-orange-4"> Average K/D Ratio </div>
                         <div class="font-16"> {{ playerStats["Average K/D Ratio"] }} </div>
+						-->
+
+						<q-card class="bg-dark q-pa-sm text-center">
+							<div class="font-18 text-yellow-8"> AVERAGE K/D RATIO </div>
+                        	<div class="font-18"> {{ playerStats["Average K/D Ratio"] }} </div>
+						</q-card>
                       </div>
 
-                      <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
+                      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						  <!--
                         <div class="font-18 text-orange-4"> Average Headshots % </div>
                         <div class="font-16"> {{ playerStats["Average Headshots %"] }} </div>
+						-->
+
+						<q-card class="bg-dark q-pa-sm text-center">
+							<div class="font-18 text-yellow-8"> AVERAGE HEADSHOTS % </div>
+                        	<div class="font-18"> {{ playerStats["Average Headshots %"] }} </div>
+						</q-card>
                       </div>
 
 
@@ -162,6 +212,7 @@
               color="primary"
               table-header-class="text-bold"
               title-class="text-bold"
+			  hide-bottom
             >
 
             <template v-slot:body-cell-imgMap="props">
@@ -205,6 +256,7 @@ const columns = [
     field: "imgMap",
     sortable: false,
     align: "center",
+	style:"font-size:16px"
   },
   {
     name: "map",
