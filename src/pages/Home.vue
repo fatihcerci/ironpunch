@@ -4,7 +4,7 @@
     <div class="row justify-center logo" style="height:90px" v-if="!$q.screen.gt.sm">
       <img
           src="~/assets/ironpunch.svg"
-          style="position:absolute; top:-140px;"
+          style="position:absolute; top:-120px;"
           width="400"
         />
     </div>

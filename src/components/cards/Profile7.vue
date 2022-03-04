@@ -96,11 +96,11 @@ export default defineComponent({
       location : "Sivas / Turkey",
       description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       socialMediaLinks : {
-        facebook : "https://facebook.com",
-        instagram : "https://instagram.com",
-        youtube : null,
+        facebook : null,
+        instagram : "https://instagram.com/muhammeddaksy",
+        twitter : null,
         twitch : null,
-        discord : "https://discord.gg/"
+        steam : "https://steamcommunity.com/profiles/76561198797024250"
       },
       settings : {
         mouseSettings : {

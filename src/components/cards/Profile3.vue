@@ -98,9 +98,9 @@ export default defineComponent({
       socialMediaLinks : {
         facebook : null,
         instagram : "https://www.instagram.com/chercy.tv/",
-        twitter : "https://www.youtube.com/channel/UCWakOeQ0mt5MIITbDkemRww",
+        twitter : null,
         twitch : "https://www.twitch.tv/chercyTV",
-        steam : "https://store.steampowered.com/"
+        steam : "https://steamcommunity.com/id/chercy"
       },
       settings : {
         mouseSettings : {

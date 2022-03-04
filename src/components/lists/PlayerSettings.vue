@@ -290,6 +290,8 @@
 </template>
 
 <script>
+
+import { onMounted } from "vue"
 import { useRouter } from "vue-router"
 import { useQuasar } from "quasar"
 import playerController from '../../controllers/playerController'
@@ -304,9 +306,15 @@ export default {
   setup() {
     const router = useRouter()
 
-	const $q = useQuasar()
+	  const $q = useQuasar()
 
     const { playerInfo } = playerController()
+
+    onMounted(() => {
+      setTimeout(function() {
+        window.scroll(0, 0)
+      }, 500)
+    })
 
     const downloadConfig = () => {
       window.open(
@@ -362,10 +370,11 @@ export default {
     return {
       router,
       playerInfo,
+      onMounted,
       downloadConfig,
       goHome,
       openLink,
-	  copyToClipboard
+	    copyToClipboard
     }
   }
 

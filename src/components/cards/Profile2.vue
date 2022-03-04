@@ -96,11 +96,11 @@ export default defineComponent({
       location : "Sivas / Turkey",
       description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       socialMediaLinks : {
-        facebook : "https://facebook.com",
-        instagram : "https://instagram.com",
+        facebook : null,
+        instagram : "https://instagram.com/hikocannn/",
         twitter : null,
-        twitch : null,
-        steam : "https://discord.gg/"
+        twitch : "https://www.twitch.tv/h1k0gql",
+        steam : "https://steamcommunity.com/id/hikocan"
       },
       settings : {
         mouseSettings : {

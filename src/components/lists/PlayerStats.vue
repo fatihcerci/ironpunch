@@ -244,7 +244,7 @@
 </template>
 
 <script>
-import { computed } from "vue"
+import { computed, onMounted } from "vue"
 import { useRouter } from "vue-router"
 import { useQuasar } from "quasar"
 import playerController from '../../controllers/playerController'
@@ -348,6 +348,13 @@ export default {
       columns.shift()
     }
 
+    onMounted(() => {
+      setTimeout(function() {
+        window.scroll(0, 0)
+      }, 500)
+    })
+
+
 
     const { playerInfo, player, playerStats, playerMapStats } = playerController()
 
@@ -394,6 +401,7 @@ export default {
       player,
       playerStats,
       mapStats,
+      onMounted,
       downloadConfig,
       goHome,
       openLink,
