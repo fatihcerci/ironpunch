@@ -96,11 +96,11 @@ export default defineComponent({
       location : "Istanbul / Turkey",
       description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       socialMediaLinks : {
-        facebook : "https://facebook.com",
-        instagram : "https://instagram.com",
+        facebook : "https://www.facebook.com/RectejuNN/",
+        instagram : "https://www.instagram.com/unaljeann/",
         twitter : null,
         twitch : null,
-        steam : "https://discord.gg/"
+        steam : "https://steamcommunity.com/id/RectejuNN"
       },
       settings : {
         mouseSettings : {
